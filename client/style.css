@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+body {
+  background: #353535;
+}
+
+header {
+  background: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+
+
+header .logo {
+  right: 87%;
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+
+header ul {
+  position: relative;
+  display: flex;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  display: block;
+  font-weight: bold;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  color: aquamarine;
+}
+
+header ul li a:after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: aquamarine;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  opacity: 0;
+  transition: all 0.7s;
+  pointer-events: none;
+}
+
+header ul li a:hover::after {
+  opacity: 1;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#text {
+  position: relative;
+  text-align: justify;
+  justify-content: center;
+  margin-bottom: 650px;
+  color: aquamarine;
+  font-size: 9em;
+  font-size: clamp(30px, 8vw, 100px);
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url(assets/bgai.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn {
+  position: absolute;
+  display: inline-block;
+  background: #111;
+  color: rgb(255, 255, 255);
+  border: 2px solid #111;
+  border-radius: 30px;
+  margin-bottom: 400px;
+  padding: 10px 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: clamp(10px, 2vw, 18px);
+}
+
+.btn:hover {
+  border: 2px solid #111;
+  color: #111;
+  background: #fff;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  background: #353535;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#chat_container {
+  flex: 1;
+  width: 50%;
+  height: 100%;
+  overflow-y: scroll;
+  background: #353535;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+/* hides scrollbar */
+#chat_container::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.ai {
+  background: #212121;
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+
+  background: #5436DA;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai .profile {
+  background: #10a37f;
+}
+
+.profile img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.message {
+  flex: 1;
+
+  color: #dcdcdc;
+  font-size: 20px;
+
+  max-width: 100%;
+  overflow-x: scroll;
+
+  /*
+   * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
+   * specifies how white space within an element should be handled. It is similar to the "pre" value, which tells the browser to treat all white space as significant and to preserve it exactly as it appears in the source code.
+   * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
+   * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
+  */
+  white-space: pre-wrap;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hides scrollbar */
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #40414F;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+
+  color: #fff;
+  font-size: 18px;
+
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+form img {
+  width: 30px;
+  height: 30px;
+}
